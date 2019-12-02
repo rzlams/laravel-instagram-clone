@@ -9,6 +9,7 @@ window.addEventListener('load', function(){
 	    		if(this.classList.contains('btn-like')){
 	    			this.classList.remove('btn-like');
 	    			this.classList.add('btn-dislike');
+	    			this.setAttribute('src', url + 'img/heart-black.png');
 
 	    			$.ajax({
 	    				url: url + /dislike/ + $(this).data('id'),
@@ -21,11 +22,10 @@ window.addEventListener('load', function(){
 	    					}
 	    				}
 	    			});
-
-	    			this.setAttribute('src', url + 'img/heart-black.png');
 	    		} else if(this.classList.contains('btn-dislike')){
 	    			this.classList.remove('btn-dislike');
 	    			this.classList.add('btn-like');
+	    			this.setAttribute('src', url + 'img/heart-red.png');
 
 	    			$.ajax({
 	    				url: url + /like/ + $(this).data('id'),
@@ -38,8 +38,6 @@ window.addEventListener('load', function(){
 	    					}
 	    				}
 	    			});
-
-	    			this.setAttribute('src', url + 'img/heart-red.png');
 	    		}
 	    });             
 	}
@@ -69,7 +67,7 @@ window.addEventListener('load', function(){
 	dislike();
 	*/
 
-
+/*
 // Buscador
 	var buscador = document.querySelector('#buscador');
 	var searchInput = document.querySelector('#search');
@@ -77,4 +75,5 @@ window.addEventListener('load', function(){
 	buscador.addEventListener('submit', function searchParam(){
 		this.setAttribute('action', url + 'usuarios/' + searchInput.value);
 	})
+*/
 })

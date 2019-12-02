@@ -39,6 +39,7 @@
                     </div>
                     
                     <div class="likes">
+{{-- Verifica si el usuario autenticado ya dio like a la imagen --}}
                         <?php $user_like = false; ?>
 
                         @foreach($image->likes as $like)
